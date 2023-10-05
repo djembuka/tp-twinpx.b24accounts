@@ -1,0 +1,10 @@
+<svg id="ProfileIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <circle id="Эллипс_4" data-name="Эллипс 4" cx="64" cy="64" r="64" fill="#f8f9fa"/>
+  <g id="vuesax_bold_frame" data-name="vuesax/bold/frame" transform="translate(-92 -236)">
+    <g id="frame" transform="translate(108 252)">
+      <path id="Vector" d="M19,0a18.983,18.983,0,0,0-.48,37.96,3.227,3.227,0,0,1,.88,0h.28A18.986,18.986,0,0,0,19,0Z" transform="translate(29 8)" fill="#bec7d1"/>
+      <path id="Vector-2" data-name="Vector" d="M48.48,5.58c-11.16-7.44-29.36-7.44-40.6,0C2.8,8.98,0,13.58,0,18.5s2.8,9.48,7.84,12.84c5.6,3.76,12.96,5.64,20.32,5.64s14.72-1.88,20.32-5.64c5.04-3.4,7.84-7.96,7.84-12.92C56.28,13.5,53.52,8.94,48.48,5.58Z" transform="translate(19.84 51.02)" fill="#bec7d1"/>
+      <path id="Vector-3" data-name="Vector" d="M0,0H96V96H0Z" transform="translate(96 96) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

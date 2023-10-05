@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <meta name="theme-color" content="#2900E0" />
+    <meta name="apple-mobile-web-app-status-bar" content="#2900e0" />
+
+    <link rel="icon" type="image/png" href="/icons/icon144.png" />
+    <link rel="apple-touch-icon" href="/icons/icon192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>Ввод нового пароля</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="twpx-b24a-page-content twpx-b24a-page--outside">
+      <div class="twpx-b24a-bg">
+        <img src="/images/background.svg" alt="" />
+      </div>
+
+      <div class="twpx-b24a-titlebar">
+        <a href="/auth/" class="twpx-b24a-back">
+          <span>Вернуться на главную</span>
+        </a>
+      </div>
+
+      <div class="twpx-b24a-content">
+        <div class="twpx-b24a-h1">Установить новый пароль</div>
+        <div class="twpx-b24a-text">Введите новый пароль.</div>
+        <div class="twpx-b24a-form">
+          <form action="">
+            <div class="twpx-b24a-float-label">
+              <div class="twpx-b24a-password twpx-b24a-password--inverse">
+                <img src="/images/icon-show-password.svg" />
+                <img src="/images/icon-hide-password.svg" />
+              </div>
+              <input
+                name="PASSWORD"
+                id="twpxB24aNewPassword"
+                type="password"
+                value=""
+                data-newpassword="true"
+              />
+              <label for="twpxB24aNewPassword">Новый пароль</label>
+            </div>
+            <div class="twpx-b24a-float-label">
+              <div class="twpx-b24a-password twpx-b24a-password--inverse">
+                <img src="/images/icon-show-password.svg" />
+                <img src="/images/icon-hide-password.svg" />
+              </div>
+              <input
+                name="PASSWORD"
+                id="twpxB24aRepeatPassword"
+                type="password"
+                value=""
+                data-newpassword="true"
+              />
+              <label for="twpxB24aRepeatPassword">Повторите новый пароль</label>
+            </div>
+            <div class="twpx-b24a-submit">
+              <button
+                type="submit"
+                class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--lg"
+              >
+                Сохранить
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="twpx-b24a-form-link">
+          <a href="/auth/">Вернуться к авторизации</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
