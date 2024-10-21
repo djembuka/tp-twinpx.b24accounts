@@ -574,6 +574,57 @@ a.twpx-b24a-btn--gray {
 .twpx-b24a-content-block-more a {
   font-size: 11px;
 }
+.twpx-b24a-autoload-element {
+  padding-top: 100%;
+  background-color: #f9f9f9;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+.twpx-b24a-deals-list-page {
+  margin-bottom: 16px;
+}
+.twpx-b24a-autoload-btn {
+  display: none;
+}
+.twpx-b24a-deals-list-page .twpx-b24a-content-block {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block {
+  opacity: 1;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
 /*_Deals_*/
 
 @media (min-width: 576px) {
