@@ -288,12 +288,11 @@ window.addEventListener('DOMContentLoaded', () => {
       const div = document.createElement('div');
       div.innerHTML = data;
       const newPageLast = div.querySelector('.twpx-b24a-deals-list-page');
+      const newButton = div.querySelector('.twpx-b24a-autoload-btn');
 
       pageLast.after(newPageLast);
 
-      url = div
-        .querySelector('.twpx-b24a-autoload-btn')
-        .getAttribute('data-url');
+      url = newButton ? newButton.getAttribute('data-url') : '';
 
       newPageLast.classList.add('twpx-b24a-content-block-page--show');
 
