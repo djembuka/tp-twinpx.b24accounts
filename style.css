@@ -1,4 +1,12 @@
 @import url(normalize.css);
+
+/*Utils*/
+.twpx-b24a-gap-16 {
+  display: grid;
+  gap: 16px;
+}
+/*_Utils_*/
+
 body {
   background-color: #2900e0;
 }
@@ -179,7 +187,7 @@ body {
   position: relative;
   background-color: #fff;
   border-radius: 30px 30px 0 0;
-  padding: 25px 12px 35px;
+  padding: 16px 16px 35px;
   width: 100%;
   min-height: calc(100vh - 64px - 20px - 64px - 25px);
   z-index: 20;
@@ -198,7 +206,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 16px;
 }
 .twpx-b24a-h3 {
   font-size: 16px;
@@ -524,6 +532,100 @@ a.twpx-b24a-btn--gray {
 }
 /*_Checkbox_*/
 /*_Form_*/
+
+/*Deals*/
+.twpx-b24a-content-block-list {
+  display: grid;
+  gap: 16px;
+}
+.twpx-b24a-content-block {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+}
+.twpx-b24a-content-block-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.twpx-b24a-content-block-items {
+  display: grid;
+  gap: 16px;
+}
+.twpx-b24a-content-block-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+.twpx-b24a-content-block-item:last-child {
+  border-bottom: 0;
+}
+.twpx-b24a-content-block-item .twpx-b24a-dt {
+  display: block;
+  color: #848c95;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+.twpx-b24a-content-block-item .twpx-b24a-dd {
+  font-size: 14px;
+}
+.twpx-b24a-content-block-more {
+  padding-top: 8px;
+}
+.twpx-b24a-content-block-more a {
+  font-size: 11px;
+}
+.twpx-b24a-autoload-element {
+  padding-top: 100%;
+  background-color: #f9f9f9;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+.twpx-b24a-deals-list-page {
+  margin-bottom: 16px;
+}
+.twpx-b24a-autoload-btn {
+  display: none;
+}
+.twpx-b24a-deals-list-page .twpx-b24a-content-block {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block {
+  opacity: 1;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+/*_Deals_*/
 
 @media (min-width: 576px) {
   .twpx-b24a-titlebar {
