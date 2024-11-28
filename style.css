@@ -5,6 +5,10 @@
   display: grid;
   gap: 16px;
 }
+.twpx-b24a-gap-10 {
+  display: grid;
+  gap: 10px;
+}
 /*_Utils_*/
 
 body {
@@ -189,7 +193,7 @@ body {
   border-radius: 30px 30px 0 0;
   padding: 16px 16px 35px;
   width: 100%;
-  min-height: calc(100vh - 64px - 20px - 64px - 25px);
+  min-height: calc(100vh - 64px - 20px);
   z-index: 20;
 }
 .twpx-b24a-page--outside .twpx-b24a-content {
@@ -626,6 +630,24 @@ a.twpx-b24a-btn--gray {
   transition-delay: 0.6s;
 }
 /*_Deals_*/
+
+/*Message with icon*/
+.twpx-b24a-message-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.twpx-b24a-message-icon svg {
+  width: 24px;
+  flex-shrink: 0;
+}
+.twpx-b24a-alert {
+  background-color: #f22;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+}
+/*_Message with icon_*/
 
 @media (min-width: 576px) {
   .twpx-b24a-titlebar {
