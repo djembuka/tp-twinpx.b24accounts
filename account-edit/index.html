@@ -25,10 +25,15 @@
       </div>
 
       <div class="twpx-b24a-titlebar">
-        <a href="/auth/" class="twpx-b24a-back">
-          <span>Вернуться на главную</span>
-        </a>
-        <a href="/auth/" class="twpx-b24a-exit">Выйти</a>
+        <div class="twpx-b24a-titlebar-left">
+          <a href="/auth/" class="twpx-b24a-back" title="Назад"> </a>
+          <a href="/" class="twpx-b24a-to-main" title="Вернуться на главную">
+            <img src="/images/accounts-logo.svg" alt="" />
+          </a>
+        </div>
+        <div class="twpx-b24a-titlebar-right">
+          <a href="/auth/" class="twpx-b24a-exit">Выйти</a>
+        </div>
       </div>
 
       <label
@@ -41,81 +46,83 @@
 
       <div class="twpx-b24a-content">
         <div class="twpx-b24a-h1">Редактирование профиля</div>
-        <div class="twpx-b24a-form">
-          <form action="">
-            <div class="twpx-b24a-form-hidden">
-              <input id="PERSONAL_PHOTO" type="file" name="PHOTO" />
-              <input
-                id="PERSONAL_PHOTO_del"
-                type="checkbox"
-                name="PERSONAL_PHOTO_del"
-                value="Y"
-              />
-            </div>
-            <div class="twpx-b24a-float-label">
-              <input
-                name="LASTNAME"
-                id="twpxB24aLastname"
-                type="text"
-                value="Иванов"
-              />
-              <label for="twpxB24aLastname">Фамилия</label>
-            </div>
-            <div class="twpx-b24a-float-label">
-              <input
-                name="NAME"
-                id="twpxB24aLastname"
-                type="text"
-                value="Петр"
-              />
-              <label for="twpxB24aName">Имя</label>
-            </div>
-            <div class="twpx-b24a-float-label">
-              <input
-                name="PATRONIMIC"
-                id="twpxB24aPatronymic"
-                type="text"
-                value="Матвеевич-Иванопольский"
-              />
-              <label for="twpxB24aPatronymic">Отчество</label>
-            </div>
-            <div class="twpx-b24a-float-label">
-              <input name="AREA" id="twpxB24aArea" type="text" value="40" />
-              <label for="twpxB24aArea">Участок</label>
-            </div>
-            <div class="twpx-b24a-float-label">
-              <input
-                name="TEL"
-                id="twpxB24aTel"
-                type="tel"
-                value="+7 916 363 63 63"
-              />
-              <label for="twpxB24aTel">Телефон</label>
-            </div>
-            <div class="twpx-b24a-float-label">
-              <input
-                name="EMAIL"
-                id="twpxB24aEmail"
-                type="email"
-                value="maxim@twinpx.ru"
-              />
-              <label for="twpxB24aEmail">Email</label>
-            </div>
-            <div class="twpx-b24a-submit">
-              <a
-                href="/account-profile/"
-                class="twpx-b24a-btn twpx-b24a-btn--gray twpx-b24a-btn--md"
-              >
-                Отменить
-              </a>
-              <button
-                type="submit"
-                class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--md"
-              >
-                Сохранить
-              </button>
-            </div>
-          </form>
+        <div class="twpx-b24a-content-pad">
+          <div class="twpx-b24a-form">
+            <form action="">
+              <div class="twpx-b24a-form-hidden">
+                <input id="PERSONAL_PHOTO" type="file" name="PHOTO" />
+                <input
+                  id="PERSONAL_PHOTO_del"
+                  type="checkbox"
+                  name="PERSONAL_PHOTO_del"
+                  value="Y"
+                />
+              </div>
+              <div class="twpx-b24a-float-label">
+                <input
+                  name="LASTNAME"
+                  id="twpxB24aLastname"
+                  type="text"
+                  value="Иванов"
+                />
+                <label for="twpxB24aLastname">Фамилия</label>
+              </div>
+              <div class="twpx-b24a-float-label">
+                <input
+                  name="NAME"
+                  id="twpxB24aLastname"
+                  type="text"
+                  value="Петр"
+                />
+                <label for="twpxB24aName">Имя</label>
+              </div>
+              <div class="twpx-b24a-float-label">
+                <input
+                  name="PATRONIMIC"
+                  id="twpxB24aPatronymic"
+                  type="text"
+                  value="Матвеевич-Иванопольский"
+                />
+                <label for="twpxB24aPatronymic">Отчество</label>
+              </div>
+              <div class="twpx-b24a-float-label">
+                <input name="AREA" id="twpxB24aArea" type="text" value="40" />
+                <label for="twpxB24aArea">Участок</label>
+              </div>
+              <div class="twpx-b24a-float-label">
+                <input
+                  name="TEL"
+                  id="twpxB24aTel"
+                  type="tel"
+                  value="+7 916 363 63 63"
+                />
+                <label for="twpxB24aTel">Телефон</label>
+              </div>
+              <div class="twpx-b24a-float-label">
+                <input
+                  name="EMAIL"
+                  id="twpxB24aEmail"
+                  type="email"
+                  value="maxim@twinpx.ru"
+                />
+                <label for="twpxB24aEmail">Email</label>
+              </div>
+              <div class="twpx-b24a-submit">
+                <a
+                  href="/account-profile/"
+                  class="twpx-b24a-btn twpx-b24a-btn--gray twpx-b24a-btn--md"
+                >
+                  Отменить
+                </a>
+                <button
+                  type="submit"
+                  class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--md"
+                >
+                  Сохранить
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

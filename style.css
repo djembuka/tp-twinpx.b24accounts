@@ -31,6 +31,7 @@ body {
   min-height: 100vh;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   color: #000;
 }
 .twpx-b24a-page-content * {
@@ -62,10 +63,13 @@ body {
 .twpx-b24a-titlebar {
   width: 100%;
   height: 64px;
-  margin-bottom: 20px;
   position: sticky;
   top: 0;
-  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  z-index: 1000;
 }
 .twpx-b24a-page--outside .twpx-b24a-titlebar {
   position: absolute;
@@ -75,10 +79,14 @@ body {
   justify-content: space-between;
   z-index: 1000;
 }
+.twpx-b24a-titlebar-left,
+.twpx-b24a-titlebar-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
 .twpx-b24a-back {
-  position: absolute;
-  top: 16px;
-  left: 20px;
+  display: block;
   width: 32px;
   height: 32px;
   color: #fff;
@@ -96,10 +104,18 @@ body {
 .twpx-b24a-back span {
   display: none;
 }
+.twpx-b24a-to-main {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 10;
+}
+.twpx-b24a-to-main img {
+  width: 32px;
+  height: 32px;
+}
 .twpx-b24a-exit {
-  position: absolute;
-  top: 16px;
-  right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,9 +135,10 @@ body {
 }
 .twpx-b24a-avatar {
   position: relative;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 25px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 20;
 }
 .twpx-b24a-avatar img {
@@ -190,8 +207,7 @@ body {
 .twpx-b24a-content {
   position: relative;
   background-color: #fff;
-  border-radius: 30px 30px 0 0;
-  padding: 16px 16px 35px;
+  border-radius: 32px 32px 0 0;
   width: 100%;
   min-height: calc(100vh - 64px - 20px);
   z-index: 20;
@@ -206,11 +222,20 @@ body {
   padding-top: calc(64px + 25px);
   min-height: calc(100vh - 64px - 20px - 128px / 2);
 }
+.twpx-b24a-content-pad {
+  padding: 16px;
+}
 .twpx-b24a-h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  padding: 32px;
+}
+.twpx-b24a-h2 {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 16px;
+  text-align: left;
+  padding: 24px 16px;
 }
 .twpx-b24a-h3 {
   font-size: 16px;
@@ -240,21 +265,18 @@ body {
 /*Table*/
 .twpx-b24a-link-item {
   position: relative;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-  padding: 0 22px 0 20px;
-  border-bottom: 1px solid #fafafa;
 }
 a.twpx-b24a-link-item::after {
   content: '';
+  position: absolute;
+  top: 50%;
+  right: 24px;
   display: block;
-  width: 8px;
-  height: 12px;
+  width: 10px;
+  height: 15px;
   background: url(/images/arrow-blue.svg) no-repeat center;
   background-size: contain;
+  transform: translateY(-50%);
 }
 .twpx-b24a-link-item:first-child {
   border-top: 1px solid #fafafa;
@@ -544,39 +566,39 @@ a.twpx-b24a-btn--gray {
 }
 .twpx-b24a-content-block {
   background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 16px;
 }
-.twpx-b24a-content-block-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
+.twpx-b24a-content-block-title a {
+  color: #000;
 }
 .twpx-b24a-content-block-items {
   display: grid;
   gap: 16px;
 }
 .twpx-b24a-content-block-item {
-  padding: 8px 0;
-  border-bottom: 1px solid #f9f9f9;
+  padding: 16px;
+  border-bottom: 1px solid #ededed;
 }
 .twpx-b24a-content-block-item:last-child {
   border-bottom: 0;
 }
+.twpx-b24a-content-block .twpx-b24a-content-block-item {
+  border-bottom: none;
+}
 .twpx-b24a-content-block-item .twpx-b24a-dt {
   display: block;
   color: #848c95;
-  font-size: 11px;
+  font-size: 14px;
   margin-bottom: 4px;
 }
 .twpx-b24a-content-block-item .twpx-b24a-dd {
-  font-size: 14px;
+  font-size: 16px;
 }
 .twpx-b24a-content-block-more {
-  padding-top: 8px;
+  padding: 16px;
 }
 .twpx-b24a-content-block-more a {
-  font-size: 11px;
+  font-size: 14px;
 }
 .twpx-b24a-autoload-element {
   padding-top: 100%;
@@ -648,6 +670,27 @@ a.twpx-b24a-btn--gray {
   padding: 16px;
 }
 /*_Message with icon_*/
+
+/*List group*/
+.twpx-b24a-list-group {
+  display: grid;
+  gap: 8px;
+}
+.twpx-b24a-list-group-item {
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  height: 64px;
+  background-color: #f9f9f9;
+}
+.twpx-b24a-list-group-item img {
+  width: 32px;
+  height: 32px;
+}
+/*_List group_*/
 
 @media (min-width: 576px) {
   .twpx-b24a-titlebar {

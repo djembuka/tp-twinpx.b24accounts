@@ -41,51 +41,55 @@
 
       <div class="twpx-b24a-content">
         <div class="twpx-b24a-h1">Восстановление доступа</div>
-        <div class="twpx-b24a-text">
-          Для восстановления доступа введите ваш email.
-        </div>
-        <div class="twpx-b24a-form">
-          <form action="">
-            <div class="twpx-b24a-float-label">
-              <input name="EMAIL" id="twpxB24aEmail" type="email" value="" />
-              <label for="twpxB24aEmail">Email</label>
-            </div>
-            <div class="twpx-b24a-float-label">
-              <input
-                id="twpxB24aCaptcha"
-                type="text"
-                name="captcha_word"
-                maxlength="50"
-                value=""
-                autocomplete="off"
-              />
-              <label for="twpxB24aCaptcha">Введите символы с картинки:*</label>
-              <input
-                type="hidden"
-                name="captcha_sid"
-                value="01e7d028667c7f4f3f5488a0405476fb"
-              />
-              <div class="twpx-b24a-captcha-img">
-                <img
-                  src="../images/background.svg"
-                  width="180"
-                  height="40"
-                  alt="CAPTCHA"
-                />
+        <div class="twpx-b24a-content-pad">
+          <div class="twpx-b24a-text">
+            Для восстановления доступа введите ваш email.
+          </div>
+          <div class="twpx-b24a-form">
+            <form action="">
+              <div class="twpx-b24a-float-label">
+                <input name="EMAIL" id="twpxB24aEmail" type="email" value="" />
+                <label for="twpxB24aEmail">Email</label>
               </div>
-            </div>
-            <div class="twpx-b24a-submit">
-              <button
-                type="submit"
-                class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--lg"
-              >
-                Восстановить
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="twpx-b24a-form-link">
-          <a href="/auth/">Вернуться к авторизации</a>
+              <div class="twpx-b24a-float-label">
+                <input
+                  id="twpxB24aCaptcha"
+                  type="text"
+                  name="captcha_word"
+                  maxlength="50"
+                  value=""
+                  autocomplete="off"
+                />
+                <label for="twpxB24aCaptcha"
+                  >Введите символы с картинки:*</label
+                >
+                <input
+                  type="hidden"
+                  name="captcha_sid"
+                  value="01e7d028667c7f4f3f5488a0405476fb"
+                />
+                <div class="twpx-b24a-captcha-img">
+                  <img
+                    src="../images/background.svg"
+                    width="180"
+                    height="40"
+                    alt="CAPTCHA"
+                  />
+                </div>
+              </div>
+              <div class="twpx-b24a-submit">
+                <button
+                  type="submit"
+                  class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--lg"
+                >
+                  Восстановить
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="twpx-b24a-form-link">
+            <a href="/auth/">Вернуться к авторизации</a>
+          </div>
         </div>
       </div>
     </div>
