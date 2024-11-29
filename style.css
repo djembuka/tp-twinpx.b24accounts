@@ -225,6 +225,63 @@ body {
 .twpx-b24a-content-pad {
   padding: 16px;
 }
+.twpx-b24a-content-pad.twpx-b24a-content-pad--preloader {
+  position: relative;
+  height: 500px;
+}
+.twpx-b24a-content-pad.twpx-b24a-content-pad--preloader * {
+  display: none;
+}
+.twpx-b24a-content-pad.twpx-b24a-content-pad--preloader .twpx-b24a-preloader,
+.twpx-b24a-content-pad.twpx-b24a-content-pad--preloader
+  .twpx-b24a-preloader
+  img {
+  display: block;
+}
+
+.twpx-b24a-content-pad.twpx-b24a-content-pad--preloader {
+  position: relative;
+  min-height: 500px;
+}
+.twpx-b24a-content-pad.twpx-b24a-content-pad--preloader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  top: calc(50% - 16px);
+  right: calc(50% - 16px);
+  -webkit-animation: vue-loader-circle 1.3s infinite linear;
+  animation: vue-loader-circle 1.3s infinite linear;
+  border: 3px solid #eee;
+  border-radius: 50%;
+  border-right-color: transparent;
+}
+
+@-webkit-keyframes vue-loader-circle {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes vue-loader-circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.twpx-b24a-preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
 .twpx-b24a-h1 {
   font-size: 24px;
   font-weight: bold;
@@ -686,11 +743,22 @@ a.twpx-b24a-btn--gray {
   height: 64px;
   background-color: #f9f9f9;
 }
-.twpx-b24a-list-group-item img {
-  width: 32px;
-  height: 32px;
-}
 /*_List group_*/
+
+/*Icons*/
+.twpx-b24a-icon-2 {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.twpx-b24a-icon-32 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 
 @media (min-width: 576px) {
   .twpx-b24a-titlebar {

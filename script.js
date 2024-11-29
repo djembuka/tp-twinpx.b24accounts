@@ -11,6 +11,30 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   }
 
+  //deals list
+  (() => {
+    const dealsListPage = document.querySelector('.twpx-b24a-deals-list-page');
+    console.log(dealsListPage);
+    if (!dealsListPage) return;
+
+    dealsListPage.classList.add('twpx-b24a-content-block-page--show');
+  })();
+
+  //list group on the profile main
+  (() => {
+    const listGroup = document.querySelector('.twpx-b24a-list-group');
+    if (!listGroup) return;
+
+    listGroup
+      .querySelectorAll('.twpx-b24a-list-group-item')
+      .addEventListener('click', (e) => {
+        const pad = listGroup.closest('.twpx-b24a-content-pad');
+        if (pad) {
+          pad.classList.add('twpx-b24a-content-pad--preloader');
+        }
+      });
+  })();
+
   //go back
   (() => {
     const backBtn = document.querySelector('.twpx-b24a-back');
