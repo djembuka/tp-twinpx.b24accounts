@@ -14,6 +14,14 @@
 body {
   background-color: #2900e0;
 }
+hr.twpx-b24a-hr {
+  border: 0;
+  margin: 0;
+  padding: 16px 0;
+}
+hr.twpx-b24a-hr.twpx-b24a-hr--16 {
+  padding: 8px 0;
+}
 .twpx-b24a-page-content a {
   color: #2900e0;
   -webkit-transition: all 0.3s ease;
@@ -151,7 +159,7 @@ body {
 }
 .twpx-b24a-avatar-edit {
   position: absolute;
-  bottom: 0;
+  bottom: 16px;
   right: 0;
   border-radius: 50%;
   width: 32px;
@@ -189,12 +197,13 @@ body {
 }
 .twpx-b24a-page--profile .twpx-b24a-avatar {
   display: block;
-  margin-bottom: 0;
   width: 128px;
   height: 128px;
-  margin-bottom: -64px;
-  margin-top: calc(20px + 25px);
   border-radius: 50%;
+  padding: 16px 0;
+  margin: 0 auto calc(-16px - 64px);
+  text-align: center;
+  box-sizing: content-box;
   z-index: 30;
 }
 .twpx-b24a-page--profile .twpx-b24a-avatar img {
@@ -219,7 +228,7 @@ body {
   min-height: 0;
 }
 .twpx-b24a-page--profile .twpx-b24a-content {
-  padding-top: calc(64px + 25px);
+  padding-top: calc(64px + 16px);
   min-height: calc(100vh - 64px - 20px - 128px / 2);
 }
 .twpx-b24a-content-pad {
@@ -715,6 +724,9 @@ a.twpx-b24a-btn--gray {
   display: flex;
   align-items: center;
   gap: 16px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f4f6f8;
 }
 .twpx-b24a-message-icon svg {
   width: 24px;
