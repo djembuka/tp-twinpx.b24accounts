@@ -1,4 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
+  //deals list
+  (() => {
+    const dealsListPage = document.querySelector('.twpx-b24a-deals-list-page');
+    if (!dealsListPage) return;
+
+    dealsListPage.classList.add('twpx-b24a-content-block-page--show');
+  })();
+
   //deals list autoload
   (() => {
     let dealsList = document.querySelector('.twpx-b24a-deals-list');
