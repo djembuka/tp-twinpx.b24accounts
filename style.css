@@ -234,6 +234,9 @@ hr.twpx-b24a-hr.twpx-b24a-hr--16 {
 .twpx-b24a-content-pad {
   padding: 16px;
 }
+.twpx-b24a-content-text-pad {
+  padding: 16px 32px;
+}
 .twpx-b24a-content-pad.twpx-b24a-content-pad--preloader {
   position: relative;
   height: 500px;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <meta name="theme-color" content="#2900E0" />
+    <meta name="apple-mobile-web-app-status-bar" content="#2900e0" />
+
+    <link rel="icon" type="image/png" href="/icons/icon144.png" />
+    <link rel="apple-touch-icon" href="/icons/icon192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>Чат</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body style="position: relative">
+    <div class="twpx-b24a-page-content">
+      <div class="twpx-b24a-bg">
+        <img src="/images/background.svg" alt="" />
+      </div>
+
+      <div class="twpx-b24a-titlebar">
+        <div class="twpx-b24a-titlebar-left">
+          <a href="/auth/" class="twpx-b24a-back" title="Назад"
+            ><span>Назад</span></a
+          >
+          <a href="/" class="twpx-b24a-to-main" title="Вернуться на главную">
+            <img src="/images/accounts-logo.svg" alt="" />
+          </a>
+        </div>
+        <div class="twpx-b24a-titlebar-right">
+          <a href="/auth/" class="twpx-b24a-exit">Выйти</a>
+        </div>
+      </div>
+
+      <div class="twpx-b24a-content">
+        <div class="twpx-b24a-h1">Онлайн чат</div>
+        <div class="twpx-b24a-content-text-pad">
+          Вы можете добавить чат, чтобы клиенты могли напрямую писать вам.
+
+          <!--Widget insert here-->
+          <script>
+            (function (w, d, u) {
+              var s = d.createElement('script');
+              s.async = true;
+              s.src = u + '?' + ((Date.now() / 60000) | 0);
+              var h = d.getElementsByTagName('script')[0];
+              h.parentNode.insertBefore(s, h);
+            })(
+              window,
+              document,
+              'https://corp.2px.ru/upload/crm/site_button/loader_8_6k7b3e.js'
+            );
+          </script>
+          <script data-skip-moving="true"></script>
+          <!--/Widget insert here-->
+        </div>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

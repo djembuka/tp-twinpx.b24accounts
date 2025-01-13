@@ -27,15 +27,15 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   //go back
-  (() => {
-    const backBtn = document.querySelector('.twpx-b24a-back');
-    if (backBtn) {
-      backBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.history.back();
-      });
-    }
-  })();
+  // (() => {
+  //   const backBtn = document.querySelector('.twpx-b24a-back');
+  //   if (backBtn) {
+  //     backBtn.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       window.history.back();
+  //     });
+  //   }
+  // })();
 
   //avatar
   let avatarEdit = document.querySelector('.twpx-b24a-avatar-edit');
