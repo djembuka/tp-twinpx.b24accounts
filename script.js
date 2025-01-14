@@ -1,3 +1,11 @@
+window.addEventListener('beforeunload', () => {
+  const content = document.querySelector('.twpx-b24a-content');
+
+  if (content) {
+    content.classList.add('twpx-b24a-content--preloader');
+  }
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   //pwa
   if ('serviceWorker' in navigator) {
@@ -12,19 +20,19 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   //list group on the profile main
-  (() => {
-    const listGroup = document.querySelector('.twpx-b24a-list-group');
-    if (!listGroup) return;
+  // (() => {
+  //   const listGroup = document.querySelector('.twpx-b24a-list-group');
+  //   if (!listGroup) return;
 
-    listGroup.querySelectorAll('.twpx-b24a-list-group-item').forEach((item) => {
-      item.addEventListener('click', (e) => {
-        const pad = listGroup.closest('.twpx-b24a-content-pad');
-        if (pad) {
-          pad.classList.add('twpx-b24a-content-pad--preloader');
-        }
-      });
-    });
-  })();
+  //   listGroup.querySelectorAll('.twpx-b24a-list-group-item').forEach((item) => {
+  //     item.addEventListener('click', (e) => {
+  //       const pad = listGroup.closest('.twpx-b24a-content-pad');
+  //       if (pad) {
+  //         pad.classList.add('twpx-b24a-content-pad--preloader');
+  //       }
+  //     });
+  //   });
+  // })();
 
   //go back
   // (() => {

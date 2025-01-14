@@ -13,6 +13,11 @@
 
 body {
   background-color: #2900e0;
+  position: static;
+  height: auto;
+}
+body:after {
+  display: none;
 }
 hr.twpx-b24a-hr {
   border: 0;
@@ -216,10 +221,31 @@ hr.twpx-b24a-hr.twpx-b24a-hr--16 {
 .twpx-b24a-content {
   position: relative;
   background-color: #fff;
-  border-radius: 32px 32px 0 0;
+  border-radius: 32px;
   width: 100%;
   min-height: calc(100vh - 64px - 20px);
   z-index: 20;
+}
+.twpx-b24a-content.twpx-b24a-content--preloader {
+  position: relative;
+  height: 415px;
+}
+.twpx-b24a-content.twpx-b24a-content--preloader * {
+  display: none;
+}
+.twpx-b24a-content.twpx-b24a-content--preloader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  top: calc(50% - 16px);
+  right: calc(50% - 16px);
+  -webkit-animation: vue-loader-circle 1.3s infinite linear;
+  animation: vue-loader-circle 1.3s infinite linear;
+  border: 3px solid #eee;
+  border-radius: 50%;
+  border-right-color: transparent;
 }
 .twpx-b24a-page--outside .twpx-b24a-content {
   -webkit-transform: translateY(-30px);
@@ -239,7 +265,7 @@ hr.twpx-b24a-hr.twpx-b24a-hr--16 {
 }
 .twpx-b24a-content-pad.twpx-b24a-content-pad--preloader {
   position: relative;
-  height: 500px;
+  height: 415px;
 }
 .twpx-b24a-content-pad.twpx-b24a-content-pad--preloader * {
   display: none;

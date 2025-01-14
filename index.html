@@ -17,6 +17,26 @@
 
     <title>Личные кабинеты для Bitrix 24</title>
     <link rel="stylesheet" href="/style.css" />
+    <style>
+      body {
+        position: relative;
+        height: 100vh;
+      }
+      body:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        top: calc(50% - 16px);
+        right: calc(50% - 16px);
+        -webkit-animation: vue-loader-circle 1.3s infinite linear;
+        animation: vue-loader-circle 1.3s infinite linear;
+        border: 3px solid #eee;
+        border-radius: 50%;
+        border-right-color: transparent;
+      }
+    </style>
   </head>
   <body>
     <div class="twpx-b24a-page-content twpx-b24a-page--outside">
