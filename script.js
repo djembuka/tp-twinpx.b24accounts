@@ -1,10 +1,19 @@
-window.addEventListener('beforeunload', () => {
+//не срабатывает на iPhone
+const isOnIOS =
+  navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i);
+const eventName = isOnIOS ? 'pagehide' : 'beforeunload';
+
+window.addEventListener(eventName, () => {
   const content = document.querySelector('.twpx-b24a-content');
 
   if (content) {
     content.classList.add('twpx-b24a-content--preloader');
   }
 });
+
+// document.addEventListener('visibilitychange', function () {
+//   alert(document.visibilityState);
+// });
 
 window.addEventListener('DOMContentLoaded', () => {
   //pwa
