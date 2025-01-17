@@ -21,7 +21,13 @@
   <body>
     <div class="twpx-b24a-page-content twpx-b24a-page--outside">
       <div class="twpx-b24a-bg">
-        <img src="/images/background.svg" alt="" />
+        <picture>
+          <source
+            srcset="/images/background-mobile.png"
+            media="(max-width: 767px)"
+          />
+          <img src="/images/background.png" alt="" />
+        </picture>
       </div>
 
       <div class="twpx-b24a-titlebar">

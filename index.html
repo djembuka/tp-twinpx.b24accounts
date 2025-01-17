@@ -17,7 +17,7 @@
 
     <title>Личные кабинеты для Bitrix 24</title>
     <link rel="stylesheet" href="/style.css" />
-    <style>
+    <!-- <style>
       body {
         position: relative;
         height: 100vh;
@@ -36,12 +36,18 @@
         border-radius: 50%;
         border-right-color: transparent;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <div class="twpx-b24a-page-content twpx-b24a-page--outside">
       <div class="twpx-b24a-bg">
-        <img src="/images/background.svg" alt="" />
+        <picture>
+          <source
+            srcset="/images/background-mobile.png"
+            media="(max-width: 767px)"
+          />
+          <img src="/images/background.png" alt="" />
+        </picture>
       </div>
       <div class="twpx-b24a-content">
         <ul>

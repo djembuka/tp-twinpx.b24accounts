@@ -21,7 +21,13 @@
   <body style="position: relative">
     <div class="twpx-b24a-page-content twpx-b24a-page--profile">
       <div class="twpx-b24a-bg">
-        <img src="/images/background.svg" alt="" />
+        <picture>
+          <source
+            srcset="/images/background-mobile.png"
+            media="(max-width: 767px)"
+          />
+          <img src="/images/background.png" alt="" />
+        </picture>
       </div>
 
       <div class="twpx-b24a-titlebar">
@@ -44,17 +50,17 @@
 
       <div class="twpx-b24a-content">
         <div class="twpx-b24a-h1">Иванов Петр Матвеевич-Иванопольский</div>
-        <div class="twpx-b24a-content-pad">
-          <div class="twpx-b24a-content-block-item">
-            <span class="twpx-b24a-dt">Email</span>
-            <span class="twpx-b24a-dd">maxim@twinpx.ru</span>
+        <div class="twpx-b24a-content-pad twpx-b24a-content-block-items">
+          <div>
+            <div class="twpx-b24a-content-block-item">
+              <span class="twpx-b24a-dt">Email</span>
+              <span class="twpx-b24a-dd">maxim@twinpx.ru</span>
+            </div>
+            <div class="twpx-b24a-content-block-item">
+              <span class="twpx-b24a-dt">Телефон</span>
+              <span class="twpx-b24a-dd">+7 916 888 99 11</span>
+            </div>
           </div>
-          <div class="twpx-b24a-content-block-item">
-            <span class="twpx-b24a-dt">Телефон</span>
-            <span class="twpx-b24a-dd">+7 916 888 99 11</span>
-          </div>
-
-          <hr class="twpx-b24a-hr twpx-b24a-hr--16" />
 
           <div class="twpx-b24a-list-group">
             <a
