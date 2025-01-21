@@ -695,6 +695,9 @@ a.twpx-b24a-btn--gray {
 .twpx-b24a-content-block .twpx-b24a-content-block-item {
   border-bottom: none;
 }
+.twpx-b24a-content-block .twpx-b24a-content-block-item:first-of-type {
+  border-top: none;
+}
 .twpx-b24a-content-block-item .twpx-b24a-dt {
   display: block;
   color: #848c95;
