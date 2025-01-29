@@ -111,7 +111,7 @@ hr.twpx-b24a-hr.twpx-b24a-hr--16 {
   color: #fff;
   font-size: 10px;
   background-color: #2900e0;
-  background-image: url(/images/arrow.svg);
+  background-image: url(images/arrow.svg);
   background-repeat: no-repeat;
   background-position: 11px 9px;
   border-radius: 50%;
@@ -384,7 +384,7 @@ a.twpx-b24a-link-item::after {
   display: block;
   width: 10px;
   height: 15px;
-  background: url(/images/arrow-blue.svg) no-repeat center;
+  background: url(images/arrow-blue.svg) no-repeat center;
   background-size: contain;
   transform: translateY(-50%);
 }
