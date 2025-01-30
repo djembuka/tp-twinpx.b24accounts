@@ -16,17 +16,31 @@ window.addEventListener(eventName, () => {
 // });
 
 window.addEventListener('DOMContentLoaded', () => {
-  //pwa
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then((registration) => {
-        console.log('registered', registration);
-      })
-      .catch((error) => {
-        console.log('failed', error);
-      });
-  }
+  //background image
+  (() => {
+    const src = document
+      .querySelector('.twpx-b24a-bg picture img')
+      .getAttribute('data-src');
+    const bgImg = document.createElement('img');
+    bgImg.src = src;
+    bgImg.width = '1px';
+    bgImg.height = '1px';
+    document.querySelector('body').append(bgImg);
+
+    bgImg.addEventListener('load', () => {
+      document
+        .querySelector('.twpx-b24a-bg picture img')
+        .setAttribute('src', src);
+
+      document
+        .querySelector('.twpx-b24a-bg picture')
+        .classList.add('twpx-b24a-bg--visible');
+
+      document
+        .querySelector('.twpx-b24a-bg-blur')
+        .classList.add('twpx-b24a-bg-blur--hidden');
+    });
+  })();
 
   //list group on the profile main
   // (() => {

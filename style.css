@@ -62,13 +62,33 @@ hr.twpx-b24a-hr.twpx-b24a-hr--16 {
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity1s ease;
+  opacity: 0;
   z-index: 10;
+}
+.twpx-b24a-bg picture.twpx-b24a-bg--visible {
+  opacity: 1;
 }
 .twpx-b24a-bg picture img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.twpx-b24a-bg-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  z-index: 11;
+}
+.twpx-b24a-bg-blur--hidden {
+  opacity: 0;
 }
 /* .twpx-b24a-page-content.twpx-b24a-page--outside .twpx-b24a-bg {
   position: relative;

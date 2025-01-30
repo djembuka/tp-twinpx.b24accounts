@@ -41,12 +41,17 @@
   <body>
     <div class="twpx-b24a-page-content twpx-b24a-page--outside">
       <div class="twpx-b24a-bg">
+        <img
+          src="/images/background-blur.png"
+          alt=""
+          class="twpx-b24a-bg-blur"
+        />
         <picture>
           <source
             srcset="/images/background-mobile.png"
             media="(max-width: 767px)"
           />
-          <img src="/images/background.png" alt="" />
+          <img src="" data-src="/images/background.png" alt="" />
         </picture>
       </div>
       <div class="twpx-b24a-content">
@@ -111,6 +116,7 @@
         </ul>
       </div>
     </div>
+    <script src="/pwa.js"></script>
     <script src="/script.js"></script>
   </body>
 </html>
