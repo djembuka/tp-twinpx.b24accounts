@@ -281,7 +281,7 @@ hr.twpx-b24a-hr.twpx-b24a-hr--16 {
   bottom: 0;
   transform: translateY(0px);
   min-height: 400px;
-  border-radius: 32px 32px 0 0;
+  border-radius: 32px;
 }
 .twpx-b24a-page--profile .twpx-b24a-content {
   padding-top: calc(64px + 16px);
@@ -872,6 +872,7 @@ a.twpx-b24a-btn--gray {
     position: absolute;
     top: 50%;
     left: 50%;
+    bottom: auto;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     padding-right: 30px;
