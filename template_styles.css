@@ -225,9 +225,12 @@ hr.twpx-b24a-hr.twpx-b24a-hr--16 {
   height: 32px;
   background-color: #2900e0;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 10;
+}
+.twpx-b24a-avatar-edit:hover {
+  opacity: 0.7;
 }
 .twpx-b24a-avatar-edit:before,
 .twpx-b24a-avatar-edit:after {
@@ -578,9 +581,9 @@ a.twpx-b24a-link-item::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 32px;
-  height: 32px;
-  margin: -16px 0 0 -16px;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
   -webkit-animation: vue-loader-circle 1.3s infinite linear;
   animation: vue-loader-circle 1.3s infinite linear;
   z-index: 10;
@@ -595,7 +598,7 @@ a.twpx-b24a-link-item::after {
   border: none;
   background-color: transparent;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -617,8 +620,9 @@ a.twpx-b24a-btn--gray {
   opacity: 0.7;
 }
 .twpx-b24a-btn--lg {
-  height: 60px;
+  height: 64px;
   font-size: 16px;
+  padding: 16px;
 }
 .twpx-b24a-btn--md {
   height: 48px;

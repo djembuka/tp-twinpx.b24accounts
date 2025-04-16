@@ -1,62 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const loaderIconWhiteBig = `<svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                  >
-                    <g
-                      clip-path="url(#paint0_angular_440_1996_clip_path)"
-                      data-figma-skip-parse="true"
-                    >
-                      <g transform="matrix(0 0.016 -0.016 0 16 16)">
-                        <foreignObject
-                          x="-1062.5"
-                          y="-1062.5"
-                          width="2125"
-                          height="2125"
-                          ><div
-                            xmlns="http://www.w3.org/1999/xhtml"
-                            style="
-                              background: conic-gradient(
-                                from 90deg,
-                                rgba(255, 255, 255, 1) 0deg,
-                                rgba(255, 255, 255, 0) 360deg
-                              );
-                              height: 100%;
-                              width: 100%;
-                              opacity: 1;
-                            "
-                          ></div
-                        ></foreignObject>
-                      </g>
-                    </g>
-                    <path
-                      d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16ZM3.2 16C3.2 23.0692 8.93075 28.8 16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93075 3.2 16Z"
-                    />
-                    <defs>
-                      <clipPath id="paint0_angular_440_1996_clip_path">
-                        <path
-                          d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16ZM3.2 16C3.2 23.0692 8.93075 28.8 16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93075 3.2 16Z"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>`;
-
-  const loaderIconWhiteSmall = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  const loaderIconWhite = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <g clip-path="url(#paint0_angular_459_749_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0 0.008 -0.008 0 8 8)"><foreignObject x="-1125" y="-1125" width="2250" height="2250"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(255, 255, 255, 1) 0deg,rgba(255, 255, 255, 0) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM1.6 8C1.6 11.5346 4.46538 14.4 8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8Z"/>
   <defs>
     <clipPath id="paint0_angular_459_749_clip_path"><path d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM1.6 8C1.6 11.5346 4.46538 14.4 8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8Z"/></clipPath></defs>
     </svg>`;
 
-  const loaderIconGrayBig = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-  <g clip-path="url(#paint0_angular_440_2005_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0 0.016 -0.016 0 16 16)"><foreignObject x="-1062.5" y="-1062.5" width="2125" height="2125"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(190, 199, 209, 1) 0deg,rgba(255, 255, 255, 0) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16ZM3.2 16C3.2 23.0692 8.93075 28.8 16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93075 3.2 16Z"/>
-  <defs>
-    <clipPath id="paint0_angular_440_2005_clip_path"><path d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16ZM3.2 16C3.2 23.0692 8.93075 28.8 16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93075 3.2 16Z"/></clipPath></defs>
-    </svg>`;
-
-  const loaderIconGraySmall = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  const loaderIconGray = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <g clip-path="url(#paint0_angular_443_36_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0 0.008 -0.008 0 8 8)"><foreignObject x="-1125" y="-1125" width="2250" height="2250"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(190, 199, 209, 1) 0deg,rgba(255, 255, 255, 0) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM1.6 8C1.6 11.5346 4.46538 14.4 8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8Z"/>
   <defs>
     <clipPath id="paint0_angular_443_36_clip_path"><path d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM1.6 8C1.6 11.5346 4.46538 14.4 8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8Z"/></clipPath></defs>
@@ -87,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     buttons.forEach((b) => {
       b.addEventListener('click', (e) => {
         b.style.width = `${b.clientWidth}px`;
-        b.innerHTML = loaderIconWhiteSmall;
+        b.innerHTML = loaderIconWhite;
         b.classList.add('twpx-b24a--loading');
       });
     });
@@ -103,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const icon = document.createElement('span');
         icon.classList.add('twpx-b24a-link-item-loading-icon');
-        icon.innerHTML = loaderIconGraySmall;
+        icon.innerHTML = loaderIconGray;
         item.appendChild(icon);
       });
     });
@@ -112,8 +61,8 @@ window.addEventListener('DOMContentLoaded', () => {
   //gray button
   (() => {
     document.querySelectorAll('.twpx-b24a-btn--gray').forEach((b) => {
-      b.addEventListener('click', () => {
-        b.innerHTML = loaderIconGrayBig;
+      b.addEventListener('click', (e) => {
+        b.innerHTML = loaderIconGray;
         b.classList.add('twpx-b24a--loading');
       });
     });
@@ -131,7 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
         e.target.tagName === 'A' &&
         p.classList.contains('twpx-b24a-content-block-more')
       ) {
-        p.innerHTML = loaderIconGraySmall;
+        p.innerHTML = loaderIconGray;
         p.classList.add('twpx-b24a--loading');
       }
     });
@@ -270,7 +219,6 @@ window.addEventListener('DOMContentLoaded', () => {
   if (password) {
     password.forEach(function (element) {
       element.addEventListener('click', function (e) {
-        e.preventDefault();
         element.classList.toggle('twpx-b24a-password--inverse');
         var input = element.parentNode.querySelector('input');
         if (input.getAttribute('type') === 'password') {
@@ -303,7 +251,7 @@ window.addEventListener('DOMContentLoaded', () => {
           if (submitContainer.querySelector('a.twpx-b24a-btn--gray')) {
             icon.classList.add('twpx-b24a-submit-loading-icon--right');
           }
-          icon.innerHTML = loaderIconWhiteBig;
+          icon.innerHTML = loaderIconWhite;
 
           submitButton.setAttribute('value', '');
           submitContainer.appendChild(icon);
