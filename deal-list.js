@@ -1,10 +1,21 @@
 window.addEventListener('DOMContentLoaded', () => {
   //deals list
   (() => {
-    const dealsListPage = document.querySelector('.twpx-b24a-deals-list-page');
-    if (!dealsListPage) return;
+    let dealsListPage;
+    let counter = 0;
 
-    dealsListPage.classList.add('twpx-b24a-content-block-page--show');
+    const intId = setInterval(() => {
+      if (counter > 50) {
+        clearInterval(intId);
+      }
+
+      dealsListPage = document.querySelector('.twpx-b24a-deals-list-page');
+
+      if (dealsListPage) {
+        clearInterval(intId);
+        dealsListPage.classList.add('twpx-b24a-content-block-page--show');
+      }
+    }, 100);
   })();
 
   //deals list autoload
