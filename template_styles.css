@@ -545,6 +545,8 @@ a.twpx-b24a-link-item::after {
   color: var(--twpx-input-color-invalid);
 }
 
+.twpx-b24a-float-label--active.twpx-b24a-float-label--invalid label,
+.twpx-b24a-float-label.twpx-b24a-float-label--invalid input:focus + label,
 .twpx-b24a-float-label--invalid label {
   color: var(--twpx-input-color-invalid);
 }
@@ -600,8 +602,8 @@ a.twpx-b24a-link-item::after {
   width: 100%;
   border-radius: 8px;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   cursor: pointer;
 }
 .twpx-b24a-btn--default {

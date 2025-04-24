@@ -231,8 +231,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   //validation
-  let form = document.querySelector('.twpx-b24a-form form');
-  if (form) {
+  document.querySelectorAll('.twpx-b24a-form form').forEach((form) => {
+    form.setAttribute('novalidate', true);
     form.addEventListener('submit', (e) => {
       let formElem = e.target;
 
@@ -253,7 +253,8 @@ window.addEventListener('DOMContentLoaded', () => {
           }
           icon.innerHTML = loaderIconWhite;
 
-          submitButton.setAttribute('value', '');
+          // submitButton.setAttribute('value', '');
+          submitButton.style.color = 'transparent';
           submitContainer.appendChild(icon);
         }
 
@@ -262,7 +263,7 @@ window.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
       }
     });
-  }
+  });
 
   function validateControl(block, control) {
     let regExp = {
@@ -295,7 +296,7 @@ window.addEventListener('DOMContentLoaded', () => {
     formElem.querySelectorAll('input').forEach((reqInput) => {
       if (reqInput.closest('.twpx-b24a-float-label')) {
         //inputs
-        if (reqInput.value.trim() === '') {
+        if (reqInput.required && reqInput.value.trim() === '') {
           if (!focusElement) {
             focusElement = reqInput;
           }
@@ -307,21 +308,21 @@ window.addEventListener('DOMContentLoaded', () => {
             .closest('.twpx-b24a-float-label')
             .classList.remove('twpx-b24a-float-label--invalid');
         }
-        // } else if (reqInput.closest('.twpx-b24a-checkbox')) {
-        //   //checkbox
-        //   if (reqInput.checked === false) {
-        //     //checkbox
-        //     if (!focusElement) {
-        //       focusElement = reqInput;
-        //     }
-        //     reqInput
-        //       .closest('.twpx-b24a-checkbox')
-        //       .classList.add('twpx-b24a-checkbox--invalid');
-        //   } else {
-        //     reqInput
-        //       .closest('.twpx-b24a-checkbox')
-        //       .classList.remove('twpx-b24a-checkbox--invalid');
-        //   }
+      } else if (reqInput.closest('.twpx-b24a-checkbox')) {
+        //checkbox
+        if (reqInput.required && reqInput.checked === false) {
+          //checkbox
+          if (!focusElement) {
+            focusElement = reqInput;
+          }
+          reqInput
+            .closest('.twpx-b24a-checkbox')
+            .classList.add('twpx-b24a-checkbox--invalid');
+        } else {
+          reqInput
+            .closest('.twpx-b24a-checkbox')
+            .classList.remove('twpx-b24a-checkbox--invalid');
+        }
       }
     });
 
@@ -329,7 +330,7 @@ window.addEventListener('DOMContentLoaded', () => {
     Object.keys(regExp).forEach((key) => {
       formElem.querySelectorAll(`[type=${key}]`).forEach((input) => {
         //required
-        if (input.value.trim() !== '') {
+        if (input.required && input.value.trim() !== '') {
           if (!regExp[key].test(input.value)) {
             if (!focusElement) {
               focusElement = input;
