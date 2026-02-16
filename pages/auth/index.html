@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="theme-color" content="#2900E0" />
+    <meta name="apple-mobile-web-app-status-bar" content="#2900e0" />
+
+    <link rel="icon" type="image/png" href="/icons/icon144.png" />
+    <link rel="apple-touch-icon" href="/icons/icon192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>Authorization</title>
+  </head>
+  <body>
+    <div id="app">
+      <form id="testForm">
+
+        <div class="twpx-form">
+
+          <div class="twpx-b24a-h1 twpx-form-heading">Вход в личный кабинет</div>
+
+          <div class="twpx-form-controls">
+            <div class="twpx-input twpx-email-input" data-iconspath="images/">
+                <input name="EMAIL" type="email" value="">
+                <label>Email</label>
+            </div>
+            <div class="twpx-input twpx-password-input" data-iconspath="images/">
+                <input name="PASSWORD" type="password" value="">
+                <label>Пароль</label>
+            </div>
+          </div>
+
+          <div class="twpx-form-buttons">
+            <input
+              type="submit"
+              name="enter"
+              value="Войти"
+              class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--lg"
+            />
+          </div>
+
+          <div class="twpx-form-links">
+            <a href="/forgot/">Забыли пароль?</a>
+          </div>
+          
+        </div>
+
+      </form>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="/pwa.js"></script>
+  </body>
+</html>
