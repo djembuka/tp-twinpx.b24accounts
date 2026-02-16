@@ -1,122 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-
-    <meta name="theme-color" content="#2900E0" />
-    <meta name="apple-mobile-web-app-status-bar" content="#2900e0" />
-
-    <link rel="icon" type="image/png" href="/icons/icon144.png" />
-    <link rel="apple-touch-icon" href="/icons/icon192.png" />
-    <link rel="manifest" href="/manifest.json" />
-
-    <title>Личные кабинеты для Bitrix 24</title>
-    <link rel="stylesheet" href="/template_styles.css" />
-    <!-- <style>
-      body {
-        position: relative;
-        height: 100vh;
-      }
-      body:after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 32px;
-        width: 32px;
-        top: calc(50% - 16px);
-        right: calc(50% - 16px);
-        -webkit-animation: vue-loader-circle 1.3s infinite linear;
-        animation: vue-loader-circle 1.3s infinite linear;
-        border: 3px solid #eee;
-        border-radius: 50%;
-        border-right-color: transparent;
-      }
-    </style> -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tp-twinpx.b24accounts</title>
   </head>
   <body>
-    <div class="twpx-b24a-page-content twpx-b24a-page--outside">
-      <div class="twpx-b24a-bg">
-        <img
-          src="/images/background-blur.png"
-          alt=""
-          class="twpx-b24a-bg-blur"
-        />
-        <picture>
-          <source
-            srcset="/images/background-mobile.png"
-            media="(max-width: 767px)"
-          />
-          <img src="" data-src="/images/background.png" alt="" />
-        </picture>
-      </div>
-      <div class="twpx-b24a-content">
-        <ul>
-          <li>
-            <a href="/wizard/">Визард</a>
-          </li>
-          <li>
-            <a href="/auth/">Авторизация</a> -
-            <a href="https://accounts.2px.ru/">Интеграция</a>
-          </li>
-          <li>
-            <a href="/forgot/">Забыли пароль</a> -
-            <a href="https://accounts.2px.ru/?forgot_password=yes"
-              >Интеграция</a
-            >
-          </li>
-          <li>
-            <a href="/error/">Сообщение об ошибке</a> -
-            <a href="https://accounts.2px.ru/?login=yes">Интеграция</a>
-          </li>
-          <li>
-            <a href="/message/">Сообщение об успешной отправке письма</a> -
-            <a href="https://accounts.2px.ru/?forgot_password=yes"
-              >Интеграция</a
-            >
-          </li>
-          <li>
-            <a href="/new-password/">Ввод нового пароля</a> -
-            <a href="https://accounts.2px.ru/?login=yes">Интеграция</a>
-          </li>
-          <li>
-            <a href="/account-main/">Личный кабинет</a> -
-            <a href="https://accounts.2px.ru/?login=yes">Интеграция</a>
-          </li>
-          <li>
-            <a href="/account-profile/">Страница пользователя</a> -
-            <a href="https://accounts.2px.ru/profile/">Интеграция</a>
-          </li>
-          <li>
-            <a href="/account-edit/">Редактирование данных пользователя</a> -
-            <a href="https://accounts.2px.ru/edit/">Интеграция</a>
-          </li>
-          <li>
-            <a href="/deals-list/">Сделки</a> -
-            <a href="https://accounts.2px.ru/deal/">Интеграция</a>
-          </li>
-          <li>
-            <a href="/deals-detail/">Сделка детально</a> -
-            <a href="https://accounts.2px.ru/deal/">Интеграция</a>
-          </li>
-          <li>
-            <a href="/deals-empty/">Сделок нет</a> -
-            <a href="https://accounts.2px.ru/deal/">Интеграция</a>
-          </li>
-          <li>
-            <a href="/chat/">Чат</a>
-          </li>
-          <li>
-            <a href="/text/">Текст</a>
-          </li>
-        </ul>
-      </div>
+    <div id="app">
+      <form id="testForm">
+
+        <div class="twpx-form">
+
+          <div class="twpx-b24a-h1 twpx-form-heading">Вход в личный кабинет</div>
+
+          <div class="twpx-form-controls">
+            <div class="twpx-input twpx-email-input" data-iconspath="images/">
+                <input name="EMAIL" type="email" value="">
+                <label>Email</label>
+            </div>
+            <div class="twpx-input twpx-password-input" data-iconspath="images/">
+                <input name="PASSWORD" type="password" value="">
+                <label>Пароль</label>
+            </div>
+          </div>
+
+          <div class="twpx-form-buttons">
+            <input
+              type="submit"
+              name="enter"
+              value="Войти"
+              class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--lg"
+            />
+          </div>
+
+          <div class="twpx-form-links">
+            <a href="/forgot/">Забыли пароль?</a>
+          </div>
+          
+        </div>
+
+      </form>
     </div>
-    <script src="/pwa.js"></script>
-    <script src="/script.js"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
