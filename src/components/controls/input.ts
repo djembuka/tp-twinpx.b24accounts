@@ -26,7 +26,7 @@ export class Input implements ControlType {
   private clearInvalidIcon: HTMLImageElement | null;
   protected iconsPath: string;
   protected icon: HTMLImageElement | null;
-  private iconMouseDown: boolean;
+  protected iconMouseDown: boolean;
   protected invalidState: boolean;
 
   protected iconPaths: IconPathsDefault = {

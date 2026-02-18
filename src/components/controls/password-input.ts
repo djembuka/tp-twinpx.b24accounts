@@ -19,6 +19,8 @@ export class PasswordInput extends Input {
 
     if (this.icon) {
       this.icon.addEventListener('click', this.handleIconClick.bind(this));
+      this.icon.addEventListener('mousedown', () => {this.iconMouseDown = true;});
+      this.icon.addEventListener('mouseup', () => {this.iconMouseDown = false;});
     }
   }
 
