@@ -9,6 +9,7 @@ interface IconPaths {
 }
 interface IconPathsDefault {
   icon: string | null;
+  hideIcon?: string | null;
   disabledIcon: string | null;
   invalidIcon: string | null;
   clearIcon: string | null;
@@ -22,7 +23,7 @@ export class Input implements ControlType {
   private inputContainer: HTMLDivElement | null;
   private clearIcon: HTMLImageElement | null;
   private clearInvalidIcon: HTMLImageElement | null;
-  private iconsPath: string;
+  protected iconsPath: string;
   protected icon: HTMLImageElement | null;
   private clearMouseDown: boolean;
 
@@ -262,8 +263,7 @@ export class Input implements ControlType {
     if (this.inputContainer)
       this.inputContainer.classList.toggle('disabled', disabled);
 
-    if (this.icon)
-      this.icon.src = `${this.iconsPath}${disabled ? this.iconPaths.disabledIcon : this.iconPaths.icon}`;
+    this.icon?.setAttribute('src', `${this.iconsPath}${disabled ? this.iconPaths.disabledIcon : this.iconPaths.icon}`);
   }
   
   // Установить состояние невалидности
@@ -273,8 +273,7 @@ export class Input implements ControlType {
       this.inputContainer.classList.toggle('invalid', invalid);
     }
 
-    if (this.icon)
-      this.icon.src = `${this.iconsPath}${invalid ? this.iconPaths.invalidIcon : this.iconPaths.icon}`;
+    this.icon?.setAttribute('src', `${this.iconsPath}${invalid ? this.iconPaths.invalidIcon : this.iconPaths.icon}`);
   }
   
   // Очистить состояние валидации
@@ -282,8 +281,7 @@ export class Input implements ControlType {
     if (this.inputContainer)
       this.inputContainer.classList.remove('valid', 'invalid');
 
-    if (this.icon)
-      this.icon.src = `${this.iconsPath}${this.iconPaths.icon}`;
+    this.icon?.setAttribute('src', `${this.iconsPath}${this.iconPaths.icon}`);
   }
   
   // Получить значение
