@@ -12,6 +12,7 @@ interface IconPathsDefault {
   hideIcon?: string | null;
   disabledIcon: string | null;
   invalidIcon: string | null;
+  invalidIconHide?: string | null;
   clearIcon: string | null;
   clearInvalidIcon: string | null;
   lockIcon: string | null;
@@ -26,6 +27,7 @@ export class Input implements ControlType {
   protected iconsPath: string;
   protected icon: HTMLImageElement | null;
   private clearMouseDown: boolean;
+  protected invalidState: boolean;
 
   protected iconPaths: IconPathsDefault = {
     icon: 'icon.svg',
@@ -41,6 +43,8 @@ export class Input implements ControlType {
       ...this.iconPaths,
       ...iconPaths,
     };
+
+    this.invalidState = false;
     
     // Сохраняем ссылку на обертку
     this.wrapper = wrapperElement;
@@ -268,20 +272,16 @@ export class Input implements ControlType {
   
   // Установить состояние невалидности
   protected setInvalidState(invalid: boolean): void {
-    if (this.inputContainer) {
-      this.inputContainer.classList.toggle('valid', !invalid);
+    if (this.inputContainer)
       this.inputContainer.classList.toggle('invalid', invalid);
-    }
 
     this.icon?.setAttribute('src', `${this.iconsPath}${invalid ? this.iconPaths.invalidIcon : this.iconPaths.icon}`);
+    this.invalidState = invalid;
   }
   
   // Очистить состояние валидации
   public clearValidationState(): void {
-    if (this.inputContainer)
-      this.inputContainer.classList.remove('valid', 'invalid');
-
-    this.icon?.setAttribute('src', `${this.iconsPath}${this.iconPaths.icon}`);
+    this.setInvalidState(false);
   }
   
   // Получить значение
