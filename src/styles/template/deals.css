@@ -1,0 +1,96 @@
+.twpx-b24a-content-block-list {
+  display: grid;
+  gap: 16px;
+}
+.twpx-b24a-content-block {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+}
+.twpx-b24a-content-block-title a {
+  color: #000;
+}
+.twpx-b24a-content-block-items {
+  display: grid;
+  gap: 16px;
+}
+.twpx-b24a-content-block-item {
+  padding: 16px;
+  border-bottom: 1px solid #ededed;
+}
+.twpx-b24a-content-block-item:first-of-type {
+  border-top: 1px solid #ededed;
+}
+.twpx-b24a-content-block .twpx-b24a-content-block-item {
+  border-bottom: none;
+}
+.twpx-b24a-content-block .twpx-b24a-content-block-item:first-of-type {
+  border-top: none;
+}
+.twpx-b24a-content-block-item .twpx-b24a-dt {
+  display: block;
+  color: #848c95;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.twpx-b24a-content-block-item .twpx-b24a-dd {
+  font-size: 16px;
+}
+.twpx-b24a-content-block-more {
+  padding: 16px;
+}
+.twpx-b24a-content-block-more a {
+  display: block;
+  line-height: 16px;
+  font-size: 14px;
+}
+.twpx-b24a-autoload-element {
+  padding-top: 100%;
+  background-color: #f9f9f9;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+.twpx-b24a-deals-list-page {
+  margin-bottom: 16px;
+}
+.twpx-b24a-autoload-btn {
+  display: none;
+}
+.twpx-b24a-deals-list-page .twpx-b24a-content-block {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block {
+  opacity: 1;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.twpx-b24a-deals-list-page.twpx-b24a-content-block-page--show
+  .twpx-b24a-content-block:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}

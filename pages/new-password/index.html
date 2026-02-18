@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <meta name="theme-color" content="#2900E0" />
+    <meta name="apple-mobile-web-app-status-bar" content="#2900e0" />
+
+    <link rel="icon" type="image/png" href="/icons/icon144.png" />
+    <link rel="apple-touch-icon" href="/icons/icon192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>Ввод нового пароля</title>
+  </head>
+  <body>
+    <div class="twpx-b24a-page-content twpx-b24a-page--outside">
+      <div class="twpx-b24a-bg">
+        <img
+          src="/images/background-blur.png"
+          alt=""
+          class="twpx-b24a-bg-blur"
+        />
+        <picture>
+          <source
+            srcset="/images/background-mobile.png"
+            media="(max-width: 767px)"
+          />
+          <img src="" data-src="/images/background.png" alt="" />
+        </picture>
+      </div>
+
+      <div class="twpx-b24a-titlebar">
+        <div class="twpx-b24a-titlebar-left">
+          <a href="/" class="twpx-b24a-to-main" title="Вернуться на главную">
+            <img src="/images/accounts-logo.svg" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div class="twpx-b24a-content twpx-b24a-gap-32">
+        <div class="twpx-b24a-h1">Введите новый пароль</div>
+        <div class="twpx-b24a-text">
+          Пароль должен быть не менее 6 символов длиной.
+        </div>
+        <div class="twpx-b24a-content-pad">
+          <div class="twpx-b24a-form">
+            <form action="">
+
+              <div class="twpx-b24a-gap-32">
+                <div class="twpx-b24a-gap-16">
+
+                  <div class="twpx-input twpx-password-input" data-iconspath="/images/icons/">
+                      <input name="PASSWORD" type="password" value="" required>
+                      <label>Новый пароль</label>
+                  </div>
+
+                  <div class="twpx-input twpx-password-input" data-iconspath="/images/icons/">
+                      <input name="PASSWORD2" type="password" value="" required>
+                      <label>Повторите новый пароль</label>
+                  </div>
+
+                </div>
+
+                <div class="twpx-b24a-submit">
+                  <input
+                    type="submit"
+                    value="Сохранить"
+                    class="twpx-b24a-btn twpx-b24a-btn--default twpx-b24a-btn--lg"
+                  />
+                </div>
+
+                <div class="twpx-b24a-form-link">
+                  <a href="/pages/auth/">Авторизоваться</a>
+                </div>
+
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="/pwa.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

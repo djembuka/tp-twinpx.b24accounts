@@ -1,0 +1,14 @@
+@import url('./template/normalize.css');
+@import url('./utils.css');
+@import url('./template/page.css');
+@import url('./template/buttons.css');
+@import url('./template/avatar.css');
+@import url('./template/content.css');
+@import url('./template/table.css');
+@import url('./template/form.css');
+@import url('./template/deals.css');
+@import url('./template/message.css');
+@import url('./template/list-group.css');
+@import url('./template/icons.css');
+
+@import url('./form.css');
