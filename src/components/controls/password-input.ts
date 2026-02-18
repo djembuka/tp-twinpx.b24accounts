@@ -5,7 +5,8 @@ export class PasswordInput extends Input {
       icon: 'password-icon.svg',
       hideIcon: 'password-icon-hide.svg',
       disabledIcon: 'password-disabled-icon.svg',
-      invalidIcon: 'password-invalid-icon.svg'
+      invalidIcon: 'password-invalid-icon.svg',
+      invalidIconHide: 'password-invalid-icon-hide.svg'
     };
 
     const iconPosition = 'right';
@@ -26,7 +27,9 @@ export class PasswordInput extends Input {
     this.input.setAttribute('type', type === 'text' ? 'password' : 'text');
 
     type = this.input.getAttribute('type');
-    const path = type === 'text' ? this.iconPaths.hideIcon : this.iconPaths.icon;
+    const iconPath = this.invalidState ? this.iconPaths.invalidIcon : this.iconPaths.icon;
+    const hidePath = this.invalidState ? this.iconPaths.invalidIconHide : this.iconPaths.hideIcon;
+    const path = type === 'text' ? hidePath : iconPath;
     this.icon?.setAttribute('src', `${this.iconsPath}${path}`);
   }
 
@@ -34,15 +37,9 @@ export class PasswordInput extends Input {
     super.setInvalidState(invalid);
 
     const type = this.input.getAttribute('type');
-    const path = type === 'text' ? this.iconPaths.hideIcon : this.iconPaths.icon;
-    this.icon?.setAttribute('src', `${this.iconsPath}${invalid ? this.iconPaths.invalidIcon : path}`);
-  }
-
-  public clearValidationState(): void {
-    super.clearValidationState();
-
-    const type = this.input.getAttribute('type');
-    const path = type === 'text' ? this.iconPaths.hideIcon : this.iconPaths.icon;
+    const iconPath = invalid ? this.iconPaths.invalidIcon : this.iconPaths.icon;
+    const hidePath = invalid ? this.iconPaths.invalidIconHide : this.iconPaths.hideIcon;
+    const path = type === 'text' ? hidePath : iconPath;
     this.icon?.setAttribute('src', `${this.iconsPath}${path}`);
   }
   
