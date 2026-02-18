@@ -1,0 +1,18 @@
+.twpx-b24a-message-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f4f6f8;
+}
+.twpx-b24a-message-icon svg {
+  width: 24px;
+  flex-shrink: 0;
+}
+.twpx-b24a-alert {
+  background-color: #f22;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+}

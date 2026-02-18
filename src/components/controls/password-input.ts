@@ -1,5 +1,4 @@
 import { Input } from './input'
-
 export class PasswordInput extends Input {
   constructor(wrapperElement: HTMLDivElement) {
     const iconPaths = {
@@ -28,8 +27,12 @@ export class PasswordInput extends Input {
   
   public validate(): boolean {
     const value = this.input.value.trim();
-    if (value.length < 6)
+    
+    if (value.length < 6) {
       this.setInvalidState(true);
       return false;
+    }
+
+    return true;
   }
 }

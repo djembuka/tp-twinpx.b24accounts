@@ -1,4 +1,6 @@
-export class SelectDropdown {
+import type { ControlType } from "./types";
+
+export class SelectDropdown implements ControlType {
   private wrapper: HTMLDivElement;
   private container: HTMLDivElement;
   private nativeSelect: HTMLSelectElement;

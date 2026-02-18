@@ -38,39 +38,14 @@ export default defineConfig({
         ...getPages()
       },
       output: {
-        // Настройки для JS файлов
-        entryFileNames: (chunkInfo) => {
-          // Если это наш главный JS файл
-          if (chunkInfo.name === 'main') {
-            return 'assets/script.js'
+        // Сохраняем структуру папок в dist
+        entryFileNames: 'assets/entry[name].[hash].js',
+        chunkFileNames: 'assets/script.js',
+        assetFileNames: (asset) => {
+          if (asset.names.includes('main.css')) {
+            return 'assets/template_styles.css'
           }
-          // Для остальных JS (если будут)
-          return 'assets/script.js'
-        },
-        
-        // Настройки для CSS файлов
-        assetFileNames: (assetInfo) => {
-          // Если это CSS файл
-          if (assetInfo.names && assetInfo.names[0]) {
-            if (assetInfo.names[0].endsWith('.css'))
-              return 'assets/styles.css'
-
-            if (assetInfo.names[0].includes('icon'))
-              return 'icons/[name].[ext]'
-
-            if (assetInfo.names[0] === 'manifest.json')
-              return 'manifest.json'
-          }
-          // Для остальных ассетов (изображения, шрифты и т.д.)
           return 'assets/[name].[ext]'
-        },
-        
-        // Настройки для общих chunk'ов
-        chunkFileNames: (chunk) => {
-          if (chunk.name === 'main') {
-            return 'assets/script.js'
-          }
-          return 'assets/[name].[hash].js'
         }
       }
     },

@@ -1,0 +1,75 @@
+.twpx-b24a-avatar {
+  position: relative;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.twpx-b24a-avatar img {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.twpx-b24a-avatar-edit {
+  position: absolute;
+  bottom: 16px;
+  right: 0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: #2900e0;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+}
+.twpx-b24a-avatar-edit:hover {
+  opacity: 0.7;
+}
+.twpx-b24a-avatar-edit:before,
+.twpx-b24a-avatar-edit:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  border-top: 2px solid #fff;
+  z-index: 10;
+}
+.twpx-b24a-avatar-edit:before {
+  top: 15px;
+  left: 8px;
+}
+.twpx-b24a-avatar-edit:after {
+  top: 15px;
+  left: 8px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.twpx-b24a-avatar-edit--del {
+  -webkit-transform: rotate(405deg);
+  transform: rotate(405deg);
+}
+.twpx-b24a-page--profile .twpx-b24a-avatar {
+  display: block;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  padding: 16px 0;
+  margin: 0 auto calc(-16px - 64px);
+  text-align: center;
+  box-sizing: content-box;
+  z-index: 30;
+}
+.twpx-b24a-page--profile .twpx-b24a-avatar img {
+  width: 128px;
+  height: 128px;
+}
+.twpx-b24a-avatar--editable {
+  cursor: pointer;
+}

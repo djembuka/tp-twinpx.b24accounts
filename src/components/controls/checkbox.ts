@@ -1,4 +1,6 @@
-export class CheckboxInput {
+import type { ControlType } from "./types";
+
+export class CheckboxInput implements ControlType {
   private wrapper: HTMLDivElement;
   private nativeCheckbox: HTMLInputElement;
   private customBox: HTMLDivElement;
@@ -365,5 +367,9 @@ export class CheckboxInput {
 
   public removeCustomClass(className: string): void {
     this.wrapper.classList.remove(className);
+  }
+
+  public validate(): boolean {
+    return true;
   }
 }

@@ -1,0 +1,47 @@
+a.twpx-b24a-list-group-item.twpx-b24a-link-item {
+  color: #000;
+}
+.twpx-b24a-link-item {
+  position: relative;
+}
+a.twpx-b24a-link-item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  display: block;
+  width: 10px;
+  height: 15px;
+  background: url(images/arrow-blue.svg) no-repeat center;
+  background-size: contain;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.twpx-b24a-link-item:first-child {
+  border-top: 1px solid #fafafa;
+}
+.twpx-b24a-link-item .twpx-b24a-dt {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  color: #848c95;
+  font-size: 11px;
+}
+.twpx-b24a-link-item .twpx-b24a-dd {
+  color: #000;
+}
+.twpx-b24a-link-item.twpx-b24a-link-item--loading:after {
+  display: none;
+}
+.twpx-b24a-link-item.twpx-b24a-link-item--loading
+  .twpx-b24a-link-item-loading-icon {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  -webkit-animation: vue-loader-circle 1.3s infinite linear;
+  animation: vue-loader-circle 1.3s infinite linear;
+  z-index: 10;
+}

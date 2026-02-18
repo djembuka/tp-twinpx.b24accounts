@@ -1,0 +1,18 @@
+.twpx-b24a-list-group {
+  display: grid;
+  gap: 8px;
+}
+.twpx-b24a-list-group-item {
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  height: 64px;
+  background-color: #f9f9f9;
+}
+.twpx-b24a-page-content a.twpx-b24a-list-group-item:active {
+  background-color: #b3b6c1;
+  opacity: 1;
+}

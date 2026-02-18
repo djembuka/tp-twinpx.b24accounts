@@ -1,3 +1,4 @@
+import type { ControlType } from "./types";
 interface IconPaths {
   icon?: string | null;
   disabledIcon?: string | null;
@@ -6,7 +7,6 @@ interface IconPaths {
   clearInvalidIcon?: string | null;
   lockIcon?: string | null;
 }
-
 interface IconPathsDefault {
   icon: string | null;
   disabledIcon: string | null;
@@ -15,8 +15,7 @@ interface IconPathsDefault {
   clearInvalidIcon: string | null;
   lockIcon: string | null;
 }
-
-export class Input {
+export class Input implements ControlType {
   private wrapper: HTMLDivElement;
   private label: HTMLLabelElement | null;
   protected input: HTMLInputElement;

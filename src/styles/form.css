@@ -1,3 +1,7 @@
+@import url('./controls/input.css');
+@import url('./controls/email-input.css');
+@import url('./controls/password-input.css');
+
 .twpx-form {
     display: grid;
     gap: 32px;

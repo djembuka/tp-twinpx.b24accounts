@@ -1,0 +1,54 @@
+.twpx-b24a-gap-10 {
+  display: grid;
+  gap: 10px;
+}
+.twpx-b24a-gap-16 {
+  display: grid;
+  gap: 16px;
+}
+.twpx-b24a-gap-32 {
+  display: grid;
+  gap: 32px;
+}
+.twpx-b24a-preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.twpx-b24a-h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1;
+}
+.twpx-b24a-h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  padding: 24px 16px;
+}
+.twpx-b24a-h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+.twpx-b24a-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.twpx-b24a-error {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #ff0000;
+}
+.twpx-b24a-valid {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: rgb(15, 165, 15);
+}

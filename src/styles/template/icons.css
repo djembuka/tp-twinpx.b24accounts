@@ -1,0 +1,72 @@
+.twpx-b24a-icon-2 {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.twpx-b24a-icon-32 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*Load icon*/
+.twpx-b24a--loading svg {
+  -webkit-animation: vue-loader-circle 1.3s infinite linear;
+  animation: vue-loader-circle 1.3s infinite linear;
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .twpx-b24a-page-content a.twpx-b24a-list-group-item:active {
+    background-color: #f9f9f9;
+    opacity: 0.7;
+  }
+  .twpx-b24a-titlebar {
+    height: 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  /* .twpx-b24a-page-content.twpx-b24a-page--outside .twpx-b24a-bg img {
+    top: 0;
+    height: 100%;
+  } */
+  .twpx-b24a-page--outside .twpx-b24a-titlebar {
+    height: 60px;
+    position: sticky;
+    margin-bottom: 0;
+  }
+  /* .twpx-b24a-page-content.twpx-b24a-page--outside .twpx-b24a-bg {
+    position: fixed;
+    height: 100vh;
+  } */
+  .twpx-b24a-exit {
+    top: 32px;
+    right: 25px;
+  }
+  .twpx-b24a-back {
+    top: 32px;
+    left: 25px;
+    border-radius: 16px;
+    padding: 0 25px 0 35px;
+    background-position: 11px 9px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .twpx-b24a-back span {
+    display: inline;
+    white-space: nowrap;
+    color: #fff;
+  }
+  /* .twpx-b24a-bg img {
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+  } */
+}
