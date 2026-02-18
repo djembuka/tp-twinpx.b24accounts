@@ -26,7 +26,7 @@ export class Input implements ControlType {
   private clearInvalidIcon: HTMLImageElement | null;
   protected iconsPath: string;
   protected icon: HTMLImageElement | null;
-  private clearMouseDown: boolean;
+  private iconMouseDown: boolean;
   protected invalidState: boolean;
 
   protected iconPaths: IconPathsDefault = {
@@ -50,7 +50,7 @@ export class Input implements ControlType {
     this.wrapper = wrapperElement;
     this.iconsPath = this.wrapper.getAttribute('data-iconspath') ?? '';
 
-    this.clearMouseDown = false;
+    this.iconMouseDown = false;
     
     // Проверяем, что впервые вызван класс на элементе
     const noInstanceOnDiv = wrapperElement.classList.contains('twpx-input') && !wrapperElement.getAttribute('data-id');
@@ -190,8 +190,8 @@ export class Input implements ControlType {
     // Обработчик для иконки очистки
     if (this.clearIcon) {
       this.clearIcon.addEventListener('click', this.handleClear.bind(this));
-      this.clearIcon.addEventListener('mousedown', () => {this.clearMouseDown = true;});
-      this.clearIcon.addEventListener('mouseup', () => {this.clearMouseDown = false;});
+      this.clearIcon.addEventListener('mousedown', () => {this.iconMouseDown = true;});
+      this.clearIcon.addEventListener('mouseup', () => {this.iconMouseDown = false;});
     }
     
     // Обработчик для иконки очистки при ошибке
@@ -201,7 +201,7 @@ export class Input implements ControlType {
   }
 
   private handleChange(): void {
-    if (!this.clearMouseDown)
+    if (!this.iconMouseDown)
       this.validate();
   }
   
@@ -239,7 +239,7 @@ export class Input implements ControlType {
     }
     
     // Валидируем при потере фокуса
-    if (!this.clearMouseDown)
+    if (!this.iconMouseDown)
       this.validate();
   }
 
