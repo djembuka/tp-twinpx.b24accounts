@@ -83,61 +83,23 @@ export class SelectDropdown implements ControlType {
     container.className = 'twpx-select-container';
     
     // Кастомный input
-    const customInput = document.createElement('div');
-    customInput.className = 'twpx-select__input';
-    customInput.setAttribute('role', 'combobox');
-    customInput.setAttribute('aria-expanded', 'false');
-    customInput.setAttribute('aria-haspopup', 'listbox');
+    const customInput = this.generateCustomInput();
+
+    const valueDisplay = this.generateValueDisplay(options, nativeSelect.value);
     
-    const valueDisplay = document.createElement('span');
-    valueDisplay.className = 'twpx-select__value';
-    valueDisplay.textContent = nativeSelect.value || '';
-    
-    this.arrowIcon = document.createElement('img');
-    this.arrowIcon.className = 'twpx-select__arrow';
-    this.arrowIcon.src = `${this.iconsPath}${this.iconPaths.arrowIcon}`;
-    this.arrowIcon.alt = '';
-    this.arrowIcon.width = 24;
-    this.arrowIcon.height = 24;
+    this.arrowIcon = this.generateArrowIcon();
     
     customInput.appendChild(valueDisplay);
     customInput.appendChild(this.arrowIcon);
     
     // Label
-    const label = document.createElement('label');
-    label.className = 'twpx-select-label';
-    label.textContent = labelText;
+    const label = this.generateLabel(labelText);
     
-    // Иконки    
-    const lockIcon = document.createElement('img');
-    lockIcon.className = 'twpx-select-lock';
-    lockIcon.src = `${this.iconsPath}${this.iconPaths.lockIcon}`;
-    lockIcon.alt = '';
-    lockIcon.width = 32;
-    lockIcon.height = 32;
+    // Иконки
+    const lockIcon = this.generateLockIcon();
     
     // Dropdown
-    const dropdown = document.createElement('div');
-    dropdown.className = 'twpx-select-dropdown';
-    dropdown.setAttribute('role', 'listbox');
-    
-    // Добавляем опции в dropdown
-    options.forEach(option => {
-      const optionDiv = document.createElement('div');
-      optionDiv.className = 'twpx-select-option';
-      optionDiv.setAttribute('role', 'option');
-      optionDiv.setAttribute('data-value', option.value);
-      optionDiv.textContent = option.textContent || option.value;
-      
-      if (option.selected) {
-        optionDiv.classList.add('selected');
-        optionDiv.setAttribute('aria-selected', 'true');
-      } else {
-        optionDiv.setAttribute('aria-selected', 'false');
-      }
-      
-      dropdown.appendChild(optionDiv);
-    });
+    const dropdown = this.generateDropdown(options);
     
     // Собираем структуру
     container.appendChild(customInput);
@@ -205,6 +167,87 @@ export class SelectDropdown implements ControlType {
         }
       }, 0);
     });
+  }
+
+  private generateCustomInput(): HTMLDivElement {
+    const customInput = document.createElement('div');
+    customInput.className = 'twpx-select__input';
+    customInput.setAttribute('role', 'combobox');
+    customInput.setAttribute('aria-expanded', 'false');
+    customInput.setAttribute('aria-haspopup', 'listbox');
+
+    return customInput;
+  }
+
+  private generateLabel(labelText: string) {
+    const label = document.createElement('label');
+    label.className = 'twpx-select-label';
+    label.textContent = labelText;
+
+    return label;
+  }
+
+  private generateArrowIcon() {
+    const arrowIcon = document.createElement('img');
+    arrowIcon.className = 'twpx-select__arrow';
+    arrowIcon.src = `${this.iconsPath}${this.iconPaths.arrowIcon}`;
+    arrowIcon.alt = '';
+    arrowIcon.width = 24;
+    arrowIcon.height = 24;
+
+    return arrowIcon;
+  }
+
+  private generateLockIcon(): HTMLImageElement {
+    const lockIcon = document.createElement('img');
+    lockIcon.className = 'twpx-select-lock';
+    lockIcon.src = `${this.iconsPath}${this.iconPaths.lockIcon}`;
+    lockIcon.alt = '';
+    lockIcon.width = 32;
+    lockIcon.height = 32;
+
+    return lockIcon;
+  }
+
+  private generateDropdown(options: NodeListOf<HTMLOptionElement>) {
+    const dropdown = document.createElement('div');
+    dropdown.className = 'twpx-select-dropdown';
+    dropdown.setAttribute('role', 'listbox');
+    
+    // Добавляем опции в dropdown
+    options.forEach(option => {
+      const optionDiv = document.createElement('div');
+      optionDiv.className = 'twpx-select-option';
+      optionDiv.setAttribute('role', 'option');
+      optionDiv.setAttribute('data-value', option.value);
+      optionDiv.textContent = option.textContent || option.value;
+      
+      if (option.selected) {
+        optionDiv.classList.add('selected');
+        optionDiv.setAttribute('aria-selected', 'true');
+      } else {
+        optionDiv.setAttribute('aria-selected', 'false');
+      }
+      
+      dropdown.appendChild(optionDiv);
+    });
+
+    return dropdown;
+  }
+
+  private generateValueDisplay(options: NodeListOf<HTMLOptionElement>, value: string): HTMLSpanElement {
+    const valueDisplay = document.createElement('span');
+    valueDisplay.className = 'twpx-select__value';
+
+    let valueOptionText: string = '';
+    options.forEach(o => {
+      if (o.getAttribute('value') === value)
+          valueOptionText = o.textContent;
+    });
+
+    valueDisplay.textContent = valueOptionText;
+
+    return valueDisplay;
   }
 
   private toggleDropdown(): void {
