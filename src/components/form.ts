@@ -1,8 +1,9 @@
 
+import { TextInput } from './controls/text-input'
 import { EmailInput } from './controls/email-input'
 import { PasswordInput } from './controls/password-input'
 
-type Control = EmailInput | PasswordInput;
+type Control = TextInput | EmailInput | PasswordInput;
 
 export class Form {
     element: HTMLFormElement | null;
@@ -23,6 +24,10 @@ export class Form {
 
         this.element.setAttribute('novalidate', 'true');
         this.element.addEventListener('submit', this.handleSubmit.bind(this));
+
+        this.element.querySelectorAll('.twpx-text-input').forEach((wrapper) => {
+            this.controls.push( new TextInput(wrapper as HTMLDivElement) );
+        });
 
         this.element.querySelectorAll('.twpx-email-input').forEach((wrapper) => {
             this.controls.push( new EmailInput(wrapper as HTMLDivElement) );
