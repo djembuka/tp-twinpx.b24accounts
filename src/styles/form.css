@@ -10,3 +10,22 @@
     display: grid;
     gap: 16px;
 }
+
+/* Перекрываем существующие стили для нового шаблона */
+.twpx-b24a-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 32px;
+  width: 100%;
+  max-width: 415px;
+  min-height: 0 !important;
+  padding: 32px !important;
+  z-index: 20;
+}
+.twpx-b24a-h1 {
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+.twpx-b24a-content-pad {
+  padding: 0 !important;
+}

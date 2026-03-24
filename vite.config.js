@@ -34,15 +34,30 @@ export default defineConfig({
       input: {
         // Главная страница (если есть)
         main: resolve(__dirname, 'index.html'),
+        form: resolve(__dirname, 'src/form.ts'),
+        'deal-list': resolve(__dirname, 'src/deal-list.ts'),
         // Все страницы из папки pages
         ...getPages()
       },
       output: {
         // Сохраняем структуру папок в dist
-        entryFileNames: 'assets/entry[name].[hash].js',
-        chunkFileNames: 'assets/script.js',
-        assetFileNames: (asset) => {
-          if (asset.names.includes('main.css')) {
+        entryFileNames: (chunkInfo) => {
+          if (chunkInfo.name === 'form')
+            return 'assets/form.js';
+
+          if (chunkInfo.name === 'deal-list')
+            return 'assets/deal-list.js';
+
+          return 'assets/entry[name].[hash].js';
+        },
+        chunkFileNames: (chunkInfo) => {
+          if (chunkInfo.name === 'main')
+            return 'assets/script.js';
+        },
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.names?.[0] ?? '';
+
+          if (name.includes('main.css')) {
             return 'assets/template_styles.css'
           }
           return 'assets/[name].[ext]'

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <meta name="theme-color" content="#2900E0" />
+    <meta name="apple-mobile-web-app-status-bar" content="#2900e0" />
+
+    <link rel="icon" type="image/png" href="/icons/icon144.png" />
+    <link rel="apple-touch-icon" href="/icons/icon192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <title>Главная страница личного кабинета</title>
+  </head>
+  <body>
+    <div class="twpx-b24a-page-content">
+      <div class="twpx-b24a-bg">
+        <img
+          src="/images/background-blur.png"
+          alt=""
+          class="twpx-b24a-bg-blur"
+        />
+        <picture>
+          <source
+            srcset="/images/background-mobile.png"
+            media="(max-width: 767px)"
+          />
+                    <img src="" data-src="/images/background.png" alt="" />
+
+        </picture>
+      </div>
+
+      <div class="twpx-b24a-titlebar">
+        <div class="twpx-b24a-titlebar-left">
+          <a href="/pages/auth/" class="twpx-b24a-back" title="Назад"
+            ><span>Назад</span></a
+          >
+          <a href="/" class="twpx-b24a-to-main" title="Вернуться на главную">
+            <img src="/images/accounts-logo.svg" alt="" />
+          </a>
+        </div>
+        <div class="twpx-b24a-titlebar-right">
+          <a href="/pages/auth/" class="twpx-b24a-exit">Выйти</a>
+        </div>
+      </div>
+
+      <div class="twpx-b24a-avatar">
+        <img src="/images/icon-profile.svg" alt="" />
+      </div>
+
+      <div class="twpx-b24a-content">
+        <div class="twpx-b24a-h1">Личный кабинет</div>
+        <div class="twpx-b24a-content-pad">
+          <div class="twpx-b24a-list-group">
+            <a href="/pages/account-profile/" class="twpx-b24a-list-group-item twpx-b24a-link-item">
+              <div class="twpx-b24a-icon-2">
+                <img src="/images/icon-profile-info.svg" alt="" />
+              </div>
+              Профиль
+            </a>
+            <a href="/pages/chat/"  class="twpx-b24a-list-group-item twpx-b24a-link-item">
+              <div class="twpx-b24a-icon-2"><img src="/images/icon-profile-chat.svg" alt="" /></div>
+              Чат
+            </a>
+            <a href="/pages/deals-list/"  class="twpx-b24a-list-group-item twpx-b24a-link-item">
+              <div class="twpx-b24a-icon-2"><img src="/images/icon-profile-deals.svg" alt="" /></div>
+              Сделки
+            </a>
+            <a href="/pages/account-pass/"  class="twpx-b24a-list-group-item twpx-b24a-link-item">
+              <div class="twpx-b24a-icon-2"><img src="/images/icon-profile-dev.svg" alt="" /></div>
+              Разработчикам
+            </a>
+          </div>
+      </div>
+    </div>
+
+
+    <script src="/pwa.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

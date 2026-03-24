@@ -3,8 +3,7 @@
   background-color: #fff;
   border-radius: 32px;
   width: 100%;
-  /* min-height: calc(100vh - 16px - 32px - 16px - 16px - 64px - 16px); */
-  padding: 32px;
+  min-height: calc(100vh - 16px - 32px - 16px - 16px - 64px - 16px);
   z-index: 20;
 }
 .twpx-b24a-content.twpx-b24a-content--preloader {
@@ -45,7 +44,9 @@
 
   min-height: calc(100vh - 16px - 32px - 16px - 16px - 64px);
 }
-.twpx-b24a-content-pad {}
+.twpx-b24a-content-pad {
+  padding: 16px;
+}
 .twpx-b24a-content-text-pad {
   padding: 16px 32px;
 }

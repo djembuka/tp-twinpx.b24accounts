@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
       '.twpx-b24a-exit, .twpx-b24a-back, .twpx-b24a-to-main'
     );
 
-    buttons.forEach((b: HTMLDivElement) :void => {
+    buttons.forEach((b: HTMLDivElement): void => {
       b.addEventListener('click', () => {
         b.style.width = `${b.clientWidth}px`;
         b.innerHTML = loaderIconWhite;
