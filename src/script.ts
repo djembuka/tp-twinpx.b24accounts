@@ -3,13 +3,14 @@ import { loaderIconWhite } from './components/icons/loaderIconWhite.ts';
 import { loaderIconGray } from './components/icons/loaderIconGray.ts';
 import { unloadEventName } from './utils/unloadEvent.ts';
 
+window.addEventListener(unloadEventName, () => {
+  // const content = document.querySelector('.twpx-b24a-content');
+  // if (content) {
+  //   content.classList.add('twpx-b24a-content--preloader');
+  // }
+});
+
 window.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener(unloadEventName, () => {
-    // const content = document.querySelector('.twpx-b24a-content');
-    // if (content) {
-    //   content.classList.add('twpx-b24a-content--preloader');
-    // }
-  });
 
   // document.addEventListener('visibilitychange', function () {
   //   alert(document.visibilityState);

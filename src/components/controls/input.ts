@@ -157,7 +157,7 @@ export class Input implements ControlType {
     return icon;
   }
   
-  private init(): void {   
+  protected init(): void {   
     const isInvalid = this.wrapper.classList.contains('invalid');
     if (isInvalid) {
       this.setInvalidState(true);
