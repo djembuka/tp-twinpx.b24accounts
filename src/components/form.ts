@@ -1,17 +1,20 @@
 
-import { TextInput } from './controls/text-input'
-import { EmailInput } from './controls/email-input'
-import { PasswordInput } from './controls/password-input'
+import { TextInput } from './controls/text-input';
+import { EmailInput } from './controls/email-input';
+import { PasswordInput } from './controls/password-input';
+import { loaderIconWhite } from '../components/icons/loaderIconWhite.ts';
 
 type Control = TextInput | EmailInput | PasswordInput;
 
 export class Form {
     element: HTMLFormElement | null;
     private controls: Control[];
+    button: HTMLElement | null;
 
     constructor(element: HTMLFormElement | null) {
         this.element = element;
         this.controls = [];
+        this.button = null;
 
         if (!this.element || this.element.tagName.toLowerCase() !== 'form')
             return;
@@ -21,6 +24,8 @@ export class Form {
 
     init() {
         if (!this.element) return;
+
+        this.button = this.element.querySelector('[type="submit"]');
 
         this.element.setAttribute('novalidate', 'true');
         this.element.addEventListener('submit', this.handleSubmit.bind(this));
@@ -38,13 +43,38 @@ export class Form {
         });
     }
 
+    private setButtonLoading() {
+        if (!this.button) return;
+
+        const tagName = this.button.tagName.toLowerCase();
+
+        if (tagName === 'input') {
+            const parent = this.button.parentNode as HTMLElement;
+            const icon = document.createElement('span');
+            icon.className = 'twpx-b24a-submit-loader';
+            icon.innerHTML = loaderIconWhite;
+
+            parent.style.width = `${parent.clientWidth}px`;
+            parent.appendChild(icon);
+            parent.classList.add('twpx-b24a--loading');
+            this.button.setAttribute('value', '');
+        } else if (tagName === 'button') {
+            this.button.style.width = `${this.button.clientWidth}px`;
+            this.button.innerHTML = loaderIconWhite;
+            this.button.classList.add('twpx-b24a--loading');
+        }
+    }
+
     private handleSubmit(event: Event): void {
         const focusElementInstance = this.validate();
 
         if (focusElementInstance) {
             event.preventDefault();
             focusElementInstance.focus();
+            return;
         }
+
+        this.setButtonLoading();
     }
 
     private validate(): Control | null {
