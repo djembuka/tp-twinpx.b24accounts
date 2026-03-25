@@ -1,10 +1,11 @@
 
 import { TextInput } from './controls/text-input';
+import { TelInput } from './controls/tel-input';
 import { EmailInput } from './controls/email-input';
 import { PasswordInput } from './controls/password-input';
 import { loaderIconWhite } from '../components/icons/loaderIconWhite.ts';
 
-type Control = TextInput | EmailInput | PasswordInput;
+type Control = TextInput | TelInput | EmailInput | PasswordInput;
 
 export class Form {
     element: HTMLFormElement | null;
@@ -32,6 +33,10 @@ export class Form {
 
         this.element.querySelectorAll('.twpx-text-input').forEach((wrapper) => {
             this.controls.push( new TextInput(wrapper as HTMLDivElement) );
+        });
+
+        this.element.querySelectorAll('.twpx-tel-input').forEach((wrapper) => {
+            this.controls.push( new TelInput(wrapper as HTMLDivElement) );
         });
 
         this.element.querySelectorAll('.twpx-email-input').forEach((wrapper) => {
