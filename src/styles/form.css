@@ -42,3 +42,7 @@
 .twpx-b24a-content-pad {
   padding: 0 !important;
 }
+
+.twpx-b24a-page--profile .twpx-b24a-content {
+  padding-top: calc(64px + 16px + 32px) !important;
+}
