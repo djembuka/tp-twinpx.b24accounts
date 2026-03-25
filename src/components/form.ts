@@ -3,7 +3,7 @@ import { TextInput } from './controls/text-input';
 import { TelInput } from './controls/tel-input';
 import { EmailInput } from './controls/email-input';
 import { PasswordInput } from './controls/password-input';
-import { loaderIconWhite } from '../components/icons/loaderIconWhite.ts';
+import { loaderIconWhite } from '../components/icons/loaderIconWhiteCopy';// чтобы сборщик не выносил файл в отдельный чанк
 
 type Control = TextInput | TelInput | EmailInput | PasswordInput;
 

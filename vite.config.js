@@ -41,6 +41,7 @@ export default defineConfig({
       },
       output: {
         // Сохраняем структуру папок в dist
+        experimentalMinChunkSize: 5000,
         entryFileNames: (chunkInfo) => {
           if (chunkInfo.name === 'form')
             return 'assets/form.js';
@@ -53,14 +54,16 @@ export default defineConfig({
         chunkFileNames: (chunkInfo) => {
           if (chunkInfo.name === 'main')
             return 'assets/script.js';
+
+          return 'assets/entry[name].[hash].js';
         },
         assetFileNames: (assetInfo) => {
           const name = assetInfo.names?.[0] ?? '';
 
-          if (name.includes('main.css')) {
-            return 'assets/template_styles.css'
-          }
-          return 'assets/[name].[ext]'
+          if (name.includes('main.css'))
+            return 'assets/template_styles.css';
+
+          return 'assets/[name].[ext]';
         }
       }
     },
