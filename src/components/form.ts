@@ -54,7 +54,9 @@ export class Form {
         const tagName = this.button.tagName.toLowerCase();
 
         if (tagName === 'input') {
-            const parent = this.button.parentNode as HTMLElement;
+            const parent = this.button.parentElement;
+            if (!parent) return;
+
             const icon = document.createElement('span');
             icon.className = 'twpx-b24a-submit-loader';
             icon.innerHTML = loaderIconWhite;
@@ -62,7 +64,7 @@ export class Form {
             parent.style.width = `${parent.clientWidth}px`;
             parent.appendChild(icon);
             parent.classList.add('twpx-b24a--loading');
-            this.button.setAttribute('value', '');
+            this.button.style.color = '#2900e0';
         } else if (tagName === 'button') {
             this.button.style.width = `${this.button.clientWidth}px`;
             this.button.innerHTML = loaderIconWhite;
@@ -70,16 +72,17 @@ export class Form {
         }
     }
 
-    private handleSubmit(event: Event): void {
+    private handleSubmit(event: Event): boolean {
         const focusElementInstance = this.validate();
 
         if (focusElementInstance) {
             event.preventDefault();
             focusElementInstance.focus();
-            return;
+            return false;
         }
 
         this.setButtonLoading();
+        return true;
     }
 
     private validate(): Control | null {
@@ -94,7 +97,7 @@ export class Form {
             return elementInstance;
         } else {
             // if new password
-            const passwords = this.controls.filter( elementInstance => elementInstance instanceof PasswordInput)
+            const passwords = this.controls.filter( element => element instanceof PasswordInput)
             if (passwords.length >= 2) {
                 const firstValue = passwords[0].getValue();
                 const isPasswordEqual = passwords.every(item => item.getValue() === firstValue);

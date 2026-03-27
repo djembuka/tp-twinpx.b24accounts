@@ -30,10 +30,14 @@
   background-color: #fff;
   border-radius: 32px;
   width: 100%;
-  max-width: 415px;
   min-height: 0 !important;
   padding: 32px !important;
   z-index: 20;
+}
+@media (min-width: 576px) {
+  .twpx-b24a-content {
+    max-width: 415px;
+  }
 }
 .twpx-b24a-h1 {
     padding: 0 !important;
